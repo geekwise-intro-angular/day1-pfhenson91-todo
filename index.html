@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To Do List</title>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script>
+    angular.module("todo", []);
+    angular.module("todo").controller("myCtrl",function($scope) {
+
+      $scope.message = "Angular";
+
+    });
+    angular.module("todo").controller("myCtrl2",function($scope) {
+      $scope.message = "Angularjs";
+      $scope.list = ["wake", "drive", "work", "go home"];
+    });
+
+  </script>
+</head>
+<body>
+  <div ng-app = "todo">
+    <div ng-controller = "myCtrl">
+        <input type="text" ng-model = "message"/>
+        {{ message }}
+
+        <h1>{{ message }}</h1>
+
+        <h2>{{ message }}</h2>
+
+
+    </div>
+    <div ng-controller = "myCtrl2">
+        {{ message }}
+    </div>
+  </div>
+</body>
+</html>
